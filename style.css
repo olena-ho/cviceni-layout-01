@@ -7,6 +7,62 @@
 
 body {
   font-family: sans-serif;
+  margin: 0;
+}
+
+.kontejner {
+  height: 100vh;
+}
+
+@media screen and (min-width: 640px) {
+  .kontejner {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .horni {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+
+  .prvni {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .druhy {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .treti {
+    grid-row: -2/-1;
+    grid-column: 1/-1;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .kontejner {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .prvni {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .druhy {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .treti {
+    grid-row: 2/3;
+    grid-column: -2/-1;
+  }
 }
 
 .blok {
@@ -16,12 +72,15 @@ body {
 .horni {
   background-color: #f1c40f;
 }
+
 .prvni {
   background-color: #2ecc71;
 }
+
 .druhy {
   background-color: #e74c3c;
 }
+
 .treti {
   background-color: #8e44ad;
 }
